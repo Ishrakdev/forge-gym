@@ -44,7 +44,7 @@ const heroTl = gsap.timeline();
 heroTl.to(".hero-title", { opacity: 1, y: 0, duration: 1, ease: "power3.out" })
       .to(".hero-subtitle", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=0.5");
 
-// 3. Scroll-Driven Card Fan Effect (Works on Desktop & Mobile)
+// 3. Scroll-Driven Card Fan Effect
 gsap.to(".card", {
     scrollTrigger: {
         trigger: ".hero-section",
