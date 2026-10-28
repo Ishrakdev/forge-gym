@@ -43,11 +43,11 @@ gsap.from(".space-card", {
     ease: "power3.out"
 });
 
-// 5. Parallax mouse move on the fan
+// 5. Parallax mouse move on the fan (DESKTOP ONLY)
 const cardFan = document.querySelector('.card-fan');
 const cards = document.querySelectorAll('.card');
 
-if (cardFan) {
+if (cardFan && window.innerWidth > 768) {
     cardFan.addEventListener('mousemove', (e) => {
         const xAxis = (window.innerWidth / 2 - e.pageX) / 30;
         const yAxis = (window.innerHeight / 2 - e.pageY) / 30;

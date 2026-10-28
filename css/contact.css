@@ -6,7 +6,6 @@
     overflow-x: hidden; 
 }
 
-/* Adds the glowing background effect */
 .contact-page::before {
     content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: radial-gradient(circle at 10% 50%, rgba(255, 90, 0, 0.15) 0%, transparent 50%),
@@ -18,7 +17,7 @@
     min-height: 100vh; 
     display: flex; 
     align-items: center; 
-    padding: 10rem 5% 5rem; /* Clears the sticky header */
+    padding: 10rem 5% 5rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -123,10 +122,22 @@
     letter-spacing: 5px; border: 1px dashed var(--primary-orange); margin: 1.5rem 0;
 }
 
-/* Responsive */
+/* =========================================
+   RESPONSIVE FIXES (Mobile & Tablet)
+   ========================================= */
+
 @media (max-width: 1024px) {
     .contact-container { grid-template-columns: 1fr; gap: 3rem; }
     .contact-text { text-align: center; }
     .contact-text p { margin: 0 auto; }
     .form-wrapper { padding: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+    .contact-main { padding: 8rem 5% 3rem; }
+    .contact-text .hero-title { font-size: clamp(2.5rem, 8vw, 3.5rem); }
+    .form-wrapper { padding: 1.5rem; }
+    .trainer-grid { grid-template-columns: 1fr; }
+    .btn-row { flex-direction: column; }
+    .btn-primary, .btn-secondary { width: 100%; text-align: center; }
 }
