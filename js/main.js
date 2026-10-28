@@ -6,18 +6,25 @@ const navLinks = document.getElementById('nav-links');
 
 if (menuToggle) {
     menuToggle.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        // Prevent scrolling when menu is open
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        const isOpen = navLinks.classList.contains('active');
+        
+        if (isOpen) {
+            navLinks.classList.remove('active');
+            menuToggle.innerHTML = '☰'; // Hamburger icon
+            document.body.style.overflow = '';
+        } else {
+            navLinks.classList.add('active');
+            menuToggle.innerHTML = '✕'; // Close icon
+            document.body.style.overflow = 'hidden';
+        }
     });
 }
 
 // Close menu when clicking a link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
         navLinks.classList.remove('active');
+        menuToggle.innerHTML = '☰';
         document.body.style.overflow = '';
     });
 });
@@ -37,25 +44,20 @@ const heroTl = gsap.timeline();
 heroTl.to(".hero-title", { opacity: 1, y: 0, duration: 1, ease: "power3.out" })
       .to(".hero-subtitle", { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, "-=0.5");
 
-// 3. Scroll-Driven Card Fan Effect (Desktop Only)
-if (window.innerWidth > 768) {
-    gsap.to(".card", {
-        scrollTrigger: {
-            trigger: ".hero-section",
-            start: "top top", 
-            end: "bottom center", 
-            scrub: 1, 
-        },
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        stagger: 0.1,
-        ease: "power2.out"
-    });
-} else {
-    // If mobile, just make cards visible immediately
-    gsap.set(".card", { opacity: 1, y: 0 });
-}
+// 3. Scroll-Driven Card Fan Effect (Works on Desktop & Mobile)
+gsap.to(".card", {
+    scrollTrigger: {
+        trigger: ".hero-section",
+        start: "top top", 
+        end: "bottom center", 
+        scrub: 1, 
+    },
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    stagger: 0.1,
+    ease: "power2.out"
+});
 
 // 4. Gym Spaces Fade In on Scroll
 gsap.from(".space-card", {
