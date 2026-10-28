@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Schedule | FORGE</title>
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="schedule-page coed-theme">
+
+    <!-- STICKY HEADER -->
+    <header class="main-header" id="header">
+        <div class="logo">FORGE.</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="schedule.html" style="color: var(--accent-color);">Schedule</a>
+            <a href="contact.html">Train with us</a>
+        </nav>
+        <a href="contact.html" class="btn-login">Join the Club</a>
+    </header>
+
+    <div class="dynamic-bg"></div>
+
+    <main class="schedule-main">
+        <div class="schedule-header">
+            <h1 class="hero-title">WEEKLY <br><span>SCHEDULE.</span></h1>
+            
+            <!-- MAIN TABS -->
+            <div class="schedule-tabs">
+                <button class="tab-btn" data-target="men">MEN</button>
+                <button class="tab-btn" data-target="women">WOMEN</button>
+                <button class="tab-btn active" data-target="coed">CO-ED</button>
+                <button class="tab-btn" data-target="personal">PERSONAL TRAINING</button>
+            </div>
+        </div>
+
+        <div class="schedule-content">
+            
+            <!-- ==================== CO-ED SCHEDULE ==================== -->
+            <div class="schedule-grid" id="coed" style="display: block;">
+                <div class="day-tabs">
+                    <button class="day-btn active" data-day="coed-sun">Sunday</button>
+                    <button class="day-btn" data-day="coed-mon">Monday</button>
+                    <button class="day-btn" data-day="coed-tue">Tuesday</button>
+                    <button class="day-btn" data-day="coed-wed">Wednesday</button>
+                    <button class="day-btn" data-day="coed-thu">Thursday</button>
+                    <button class="day-btn" data-day="coed-fri">Friday</button>
+                    <button class="day-btn" data-day="coed-sat">Saturday</button>
+                </div>
+
+                <!-- Co-Ed Sunday -->
+                <div class="day-content active" id="coed-sun">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>AM</span></div><div class="class-info"><h3>SUNRISE HIIT</h3><p>High Intensity • 45 Min</p></div><button class="book-btn" data-class="Sunrise HIIT" data-time="Sunday 08:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">09:30 <span>AM</span></div><div class="class-info"><h3>MOBILITY FLOW</h3><p>Recovery • 40 Min</p></div><button class="book-btn" data-class="Mobility Flow" data-time="Sunday 09:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:15 <span>PM</span></div><div class="class-info"><h3>UPPER / LOWER</h3><p>Strength • 50 Min</p></div><button class="book-btn" data-class="Upper / Lower" data-time="Sunday 12:15 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:30 <span>PM</span></div><div class="class-info"><h3>CROSS TRAINING</h3><p>Functional • 60 Min</p></div><button class="book-btn" data-class="Cross Training" data-time="Sunday 05:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:15 <span>PM</span></div><div class="class-info"><h3>POWER LIFTING</h3><p>Strength • 60 Min</p></div><button class="book-btn" data-class="Power Lifting" data-time="Sunday 06:15 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:00 <span>PM</span></div><div class="class-info"><h3>COMMUNITY HIIT</h3><p>Cardio • 45 Min</p></div><button class="book-btn" data-class="Community HIIT" data-time="Sunday 07:00 PM">Book →</button></div>
+                    </div>
+                </div>
+
+                <!-- Co-Ed Monday -->
+                <div class="day-content" id="coed-mon" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">07:00 <span>AM</span></div><div class="class-info"><h3>MORNING MOBILITY</h3><p>Recovery • 40 Min</p></div><button class="book-btn" data-class="Morning Mobility" data-time="Monday 07:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">09:00 <span>AM</span></div><div class="class-info"><h3>SPIN & SWEAT</h3><p>Cardio • 45 Min</p></div><button class="book-btn" data-class="Spin & Sweat" data-time="Monday 09:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:00 <span>PM</span></div><div class="class-info"><h3>CORE CRUSHER</h3><p>Abs & Core • 30 Min</p></div><button class="book-btn" data-class="Core Crusher" data-time="Monday 12:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:00 <span>PM</span></div><div class="class-info"><h3>OLYMPIC LIFTING</h3><p>Strength • 75 Min</p></div><button class="book-btn" data-class="Olympic Lifting" data-time="Monday 05:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:00 <span>PM</span></div><div class="class-info"><h3>AFTER HOURS</h3><p>Total Body • 60 Min</p></div><button class="book-btn" data-class="After Hours" data-time="Monday 06:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:30 <span>PM</span></div><div class="class-info"><h3>YOGA SCULPT</h3><p>Flexibility • 50 Min</p></div><button class="book-btn" data-class="Yoga Sculpt" data-time="Monday 07:30 PM">Book →</button></div>
+                    </div>
+                </div>
+
+                <!-- Co-Ed Tuesday -->
+                <div class="day-content" id="coed-tue" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>AM</span></div><div class="class-info"><h3>ENGINE ROOM</h3><p>Conditioning • 45 Min</p></div><button class="book-btn" data-class="Engine Room" data-time="Tuesday 06:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:30 <span>AM</span></div><div class="class-info"><h3>KETTLEBELL BURN</h3><p>Strength • 45 Min</p></div><button class="book-btn" data-class="Kettlebell Burn" data-time="Tuesday 08:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:00 <span>PM</span></div><div class="class-info"><h3>EXPRESS ABS</h3><p>Core • 30 Min</p></div><button class="book-btn" data-class="Express Abs" data-time="Tuesday 12:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:30 <span>PM</span></div><div class="class-info"><h3>BOXING FUNDAMENTALS</h3><p>Combat • 60 Min</p></div><button class="book-btn" data-class="Boxing Fundamentals" data-time="Tuesday 05:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>PM</span></div><div class="class-info"><h3>TOTAL BODY PUMP</h3><p>Strength • 50 Min</p></div><button class="book-btn" data-class="Total Body Pump" data-time="Tuesday 06:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:30 <span>PM</span></div><div class="class-info"><h3>DEEP STRETCH</h3><p>Recovery • 45 Min</p></div><button class="book-btn" data-class="Deep Stretch" data-time="Tuesday 07:30 PM">Book →</button></div>
+                    </div>
+                </div>
+
+                <!-- Co-Ed Wednesday -->
+                <div class="day-content" id="coed-wed" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">06:00 <span>AM</span></div><div class="class-info"><h3>DAWN PATROL</h3><p>Cardio • 45 Min</p></div><button class="book-btn" data-class="Dawn Patrol" data-time="Wednesday 06:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>AM</span></div><div class="class-info"><h3>FUNCTIONAL FIT</h3><p>Functional • 50 Min</p></div><button class="book-btn" data-class="Functional Fit" data-time="Wednesday 08:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:15 <span>PM</span></div><div class="class-info"><h3>MIDDAY RESET</h3><p>Mobility • 40 Min</p></div><button class="book-btn" data-class="Midday Reset" data-time="Wednesday 12:15 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:00 <span>PM</span></div><div class="class-info"><h3>HIIT & RUN</h3><p>Cardio • 45 Min</p></div><button class="book-btn" data-class="HIIT & Run" data-time="Wednesday 05:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:00 <span>PM</span></div><div class="class-info"><h3>IRON FOUNDATIONS</h3><p>Strength • 60 Min</p></div><button class="book-btn" data-class="Iron Foundations" data-time="Wednesday 06:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:30 <span>PM</span></div><div class="class-info"><h3>ZUMBA</h3><p>Dance • 60 Min</p></div><button class="book-btn" data-class="Zumba" data-time="Wednesday 07:30 PM">Book →</button></div>
+                    </div>
+                </div>
+
+                <!-- Co-Ed Thursday -->
+                <div class="day-content" id="coed-thu" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">07:00 <span>AM</span></div><div class="class-info"><h3>SUNUP SPIN</h3><p>Cardio • 45 Min</p></div><button class="book-btn" data-class="Sunup Spin" data-time="Thursday 07:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">09:00 <span>AM</span></div><div class="class-info"><h3>GLUTES & LEGS</h3><p>Lower Body • 50 Min</p></div><button class="book-btn" data-class="Glutes & Legs" data-time="Thursday 09:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:00 <span>PM</span></div><div class="class-info"><h3>LUNCHTIME LIFT</h3><p>Strength • 45 Min</p></div><button class="book-btn" data-class="Lunchtime Lift" data-time="Thursday 12:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:30 <span>PM</span></div><div class="class-info"><h3>COMBAT FIT</h3><p>Boxing • 45 Min</p></div><button class="book-btn" data-class="Combat Fit" data-time="Thursday 05:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>PM</span></div><div class="class-info"><h3>CORE & CARDIO</h3><p>Hybrid • 45 Min</p></div><button class="book-btn" data-class="Core & Cardio" data-time="Thursday 06:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>PM</span></div><div class="class-info"><h3>WIND DOWN YOGA</h3><p>Recovery • 60 Min</p></div><button class="book-btn" data-class="Wind Down Yoga" data-time="Thursday 08:00 PM">Book →</button></div>
+                    </div>
+                </div>
+
+                <!-- Co-Ed Friday -->
+                <div class="day-content" id="coed-fri" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>AM</span></div><div class="class-info"><h3>TGIF HIIT</h3><p>Cardio • 45 Min</p></div><button class="book-btn" data-class="TGIF HIIT" data-time="Friday 06:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>AM</span></div><div class="class-info"><h3>FULL BODY SCULPT</h3><p>Tone • 50 Min</p></div><button class="book-btn" data-class="Full Body Sculpt" data-time="Friday 08:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:00 <span>PM</span></div><div class="class-info"><h3>FAST & FURIOUS</h3><p>Speed • 30 Min</p></div><button class="book-btn" data-class="Fast & Furious" data-time="Friday 12:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">04:30 <span>PM</span></div><div class="class-info"><h3>POWER HOUR</h3><p>Strength • 60 Min</p></div><button class="book-btn" data-class="Power Hour" data-time="Friday 04:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:00 <span>PM</span></div><div class="class-info"><h3>PARTNER WORKOUT</h3><p>Functional • 60 Min</p></div><button class="book-btn" data-class="Partner Workout" data-time="Friday 06:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:30 <span>PM</span></div><div class="class-info"><h3>OPEN GYM</h3><p>Access • 60 Min</p></div><button class="book-btn" data-class="Open Gym" data-time="Friday 07:30 PM">Book →</button></div>
+                    </div>
+                </div>
+
+                <!-- Co-Ed Saturday -->
+                <div class="day-content" id="coed-sat" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>AM</span></div><div class="class-info"><h3>WEEKEND WARRIOR</h3><p>Endurance • 90 Min</p></div><button class="book-btn" data-class="Weekend Warrior" data-time="Saturday 08:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">09:30 <span>AM</span></div><div class="class-info"><h3>SATURDAY SWEAT</h3><p>HIIT • 45 Min</p></div><button class="book-btn" data-class="Saturday Sweat" data-time="Saturday 09:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">11:00 <span>AM</span></div><div class="class-info"><h3>HEAVY METAL</h3><p>Powerlifting • 60 Min</p></div><button class="book-btn" data-class="Heavy Metal" data-time="Saturday 11:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:30 <span>PM</span></div><div class="class-info"><h3>CORE CRUSHER</h3><p>Core • 30 Min</p></div><button class="book-btn" data-class="Core Crusher" data-time="Saturday 12:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">02:00 <span>PM</span></div><div class="class-info"><h3>BOXING SPARRING</h3><p>Combat • 60 Min</p></div><button class="book-btn" data-class="Boxing Sparring" data-time="Saturday 02:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">04:00 <span>PM</span></div><div class="class-info"><h3>RESTORATIVE FLOW</h3><p>Yoga • 60 Min</p></div><button class="book-btn" data-class="Restorative Flow" data-time="Saturday 04:00 PM">Book →</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== MEN SCHEDULE ==================== -->
+            <div class="schedule-grid" id="men" style="display: none;">
+                <div class="day-tabs">
+                    <button class="day-btn active" data-day="men-sun">Sunday</button>
+                    <button class="day-btn" data-day="men-mon">Monday</button>
+                    <button class="day-btn" data-day="men-tue">Tuesday</button>
+                    <button class="day-btn" data-day="men-wed">Wednesday</button>
+                    <button class="day-btn" data-day="men-thu">Thursday</button>
+                    <button class="day-btn" data-day="men-fri">Friday</button>
+                    <button class="day-btn" data-day="men-sat">Saturday</button>
+                </div>
+
+                <!-- Men Sunday -->
+                <div class="day-content active" id="men-sun">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">09:00 <span>AM</span></div><div class="class-info"><h3>IRON FOUNDATIONS</h3><p>Strength • 60 Min</p></div><button class="book-btn" data-class="Iron Foundations" data-time="Sunday 09:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">11:00 <span>AM</span></div><div class="class-info"><h3>POWER HOUR</h3><p>Strength • 60 Min</p></div><button class="book-btn" data-class="Power Hour" data-time="Sunday 11:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">01:00 <span>PM</span></div><div class="class-info"><h3>OPEN GYM</h3><p>Access • 120 Min</p></div><button class="book-btn" data-class="Open Gym" data-time="Sunday 01:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">03:00 <span>PM</span></div><div class="class-info"><h3>MOBILITY</h3><p>Recovery • 45 Min</p></div><button class="book-btn" data-class="Mobility" data-time="Sunday 03:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:30 <span>PM</span></div><div class="class-info"><h3>HEAVY LIFTING</h3><p>Hypertrophy • 75 Min</p></div><button class="book-btn" data-class="Heavy Lifting" data-time="Sunday 05:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:00 <span>PM</span></div><div class="class-info"><h3>EVENING CARDIO</h3><p>Cardio • 45 Min</p></div><button class="book-btn" data-class="Evening Cardio" data-time="Sunday 07:00 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Men Monday -->
+                <div class="day-content" id="men-mon" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>AM</span></div><div class="class-info"><h3>ENGINE ROOM</h3><p>Power • 45 Min</p></div><button class="book-btn" data-class="Engine Room" data-time="Monday 06:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:30 <span>AM</span></div><div class="class-info"><h3>BODYBUILDING 101</h3><p>Hypertrophy • 60 Min</p></div><button class="book-btn" data-class="Bodybuilding 101" data-time="Monday 08:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:00 <span>PM</span></div><div class="class-info"><h3>EXPRESS LIFT</h3><p>Strength • 30 Min</p></div><button class="book-btn" data-class="Express Lift" data-time="Monday 12:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:00 <span>PM</span></div><div class="class-info"><h3>POWERLIFTING</h3><p>Strength • 60 Min</p></div><button class="book-btn" data-class="Powerlifting" data-time="Monday 05:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>PM</span></div><div class="class-info"><h3>COMBAT FIT</h3><p>Boxing • 45 Min</p></div><button class="book-btn" data-class="Combat Fit" data-time="Monday 06:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:30 <span>PM</span></div><div class="class-info"><h3>CORE & STRETCH</h3><p>Recovery • 40 Min</p></div><button class="book-btn" data-class="Core & Stretch" data-time="Monday 07:30 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Men Tuesday -->
+                <div class="day-content" id="men-tue" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">07:00 <span>AM</span></div><div class="class-info"><h3>DEADLIFT FOCUS</h3><p>Strength • 60 Min</p></div><button class="book-btn" data-class="Deadlift Focus" data-time="Tuesday 07:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">09:00 <span>AM</span></div><div class="class-info"><h3>UPPER BODY PUMP</h3><p>Hypertrophy • 50 Min</p></div><button class="book-btn" data-class="Upper Body Pump" data-time="Tuesday 09:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:30 <span>PM</span></div><div class="class-info"><h3>KETTLEBELL SWINGS</h3><p>Functional • 30 Min</p></div><button class="book-btn" data-class="Kettlebell Swings" data-time="Tuesday 12:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:30 <span>PM</span></div><div class="class-info"><h3>MMA BASICS</h3><p>Combat • 60 Min</p></div><button class="book-btn" data-class="MMA Basics" data-time="Tuesday 05:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>PM</span></div><div class="class-info"><h3>TRICEPS & CHEST</h3><p>Isolation • 45 Min</p></div><button class="book-btn" data-class="Triceps & Chest" data-time="Tuesday 06:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>PM</span></div><div class="class-info"><h3>DEEP STRETCH</h3><p>Recovery • 45 Min</p></div><button class="book-btn" data-class="Deep Stretch" data-time="Tuesday 08:00 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Men Wednesday -->
+                <div class="day-content" id="men-wed" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">06:00 <span>AM</span></div><div class="class-info"><h3>BENCH PRESS CLUB</h3><p>Strength • 60 Min</p></div><button class="book-btn" data-class="Bench Press Club" data-time="Wednesday 06:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>AM</span></div><div class="class-info"><h3>ARM DAY</h3><p>Hypertrophy • 45 Min</p></div><button class="book-btn" data-class="Arm Day" data-time="Wednesday 08:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:15 <span>PM</span></div><div class="class-info"><h3>HIIT FOR MEN</h3><p>Cardio • 30 Min</p></div><button class="book-btn" data-class="HIIT for Men" data-time="Wednesday 12:15 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:00 <span>PM</span></div><div class="class-info"><h3>FUNCTIONAL STRENGTH</h3><p>Functional • 50 Min</p></div><button class="book-btn" data-class="Functional Strength" data-time="Wednesday 05:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:00 <span>PM</span></div><div class="class-info"><h3>SPARRING</h3><p>Boxing • 60 Min</p></div><button class="book-btn" data-class="Sparring" data-time="Wednesday 06:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:30 <span>PM</span></div><div class="class-info"><h3>RECOVERY FLOW</h3><p>Mobility • 45 Min</p></div><button class="book-btn" data-class="Recovery Flow" data-time="Wednesday 07:30 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Men Thursday -->
+                <div class="day-content" id="men-thu" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">07:00 <span>AM</span></div><div class="class-info"><h3>BACK & BICEPS</h3><p>Strength • 60 Min</p></div><button class="book-btn" data-class="Back & Biceps" data-time="Thursday 07:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">09:00 <span>AM</span></div><div class="class-info"><h3>LEG DAY DESTROYER</h3><p>Lower Body • 75 Min</p></div><button class="book-btn" data-class="Leg Day Destroyer" data-time="Thursday 09:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:00 <span>PM</span></div><div class="class-info"><h3>CORE STRENGTH</h3><p>Core • 30 Min</p></div><button class="book-btn" data-class="Core Strength" data-time="Thursday 12:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:30 <span>PM</span></div><div class="class-info"><h3>OLYMPIC LIFTING</h3><p>Power • 60 Min</p></div><button class="book-btn" data-class="Olympic Lifting" data-time="Thursday 05:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>PM</span></div><div class="class-info"><h3>BOXING DRILLS</h3><p>Combat • 45 Min</p></div><button class="book-btn" data-class="Boxing Drills" data-time="Thursday 06:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>PM</span></div><div class="class-info"><h3>SAUNA & STRETCH</h3><p>Recovery • 60 Min</p></div><button class="book-btn" data-class="Sauna & Stretch" data-time="Thursday 08:00 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Men Friday -->
+                <div class="day-content" id="men-fri" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>AM</span></div><div class="class-info"><h3>FULL BODY POWER</h3><p>Strength • 60 Min</p></div><button class="book-btn" data-class="Full Body Power" data-time="Friday 06:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:30 <span>AM</span></div><div class="class-info"><h3>SHOULDER SCULPT</h3><p>Isolation • 45 Min</p></div><button class="book-btn" data-class="Shoulder Sculpt" data-time="Friday 08:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:00 <span>PM</span></div><div class="class-info"><h3>SPRINT INTERVALS</h3><p>Cardio • 30 Min</p></div><button class="book-btn" data-class="Sprint Intervals" data-time="Friday 12:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:00 <span>PM</span></div><div class="class-info"><h3>CROSSFIT WOD</h3><p>Functional • 60 Min</p></div><button class="book-btn" data-class="CrossFit WOD" data-time="Friday 05:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:15 <span>PM</span></div><div class="class-info"><h3>COMBAT CONDITIONING</h3><p>Combat • 45 Min</p></div><button class="book-btn" data-class="Combat Conditioning" data-time="Friday 06:15 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:30 <span>PM</span></div><div class="class-info"><h3>WEEKEND PREP MOBILITY</h3><p>Recovery • 45 Min</p></div><button class="book-btn" data-class="Weekend Prep Mobility" data-time="Friday 07:30 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Men Saturday -->
+                <div class="day-content" id="men-sat" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>AM</span></div><div class="class-info"><h3>OPEN GYM</h3><p>Access • 120 Min</p></div><button class="book-btn" data-class="Open Gym" data-time="Saturday 08:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">10:00 <span>AM</span></div><div class="class-info"><h3>STRONGMAN TRAINING</h3><p>Power • 60 Min</p></div><button class="book-btn" data-class="Strongman Training" data-time="Saturday 10:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:00 <span>PM</span></div><div class="class-info"><h3>MUSCLE ENDURANCE</h3><p>Conditioning • 50 Min</p></div><button class="book-btn" data-class="Muscle Endurance" data-time="Saturday 12:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">02:00 <span>PM</span></div><div class="class-info"><h3>CALISTHENICS</h3><p>Bodyweight • 45 Min</p></div><button class="book-btn" data-class="Calisthenics" data-time="Saturday 02:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">04:00 <span>PM</span></div><div class="class-info"><h3>POWER CLEANS</h3><p>Olympic • 60 Min</p></div><button class="book-btn" data-class="Power Cleans" data-time="Saturday 04:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:30 <span>PM</span></div><div class="class-info"><h3>ENDURANCE RUN</h3><p>Cardio • 45 Min</p></div><button class="book-btn" data-class="Endurance Run" data-time="Saturday 05:30 PM">Book →</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== WOMEN SCHEDULE ==================== -->
+            <div class="schedule-grid" id="women" style="display: none;">
+                <div class="day-tabs">
+                    <button class="day-btn active" data-day="women-sun">Sunday</button>
+                    <button class="day-btn" data-day="women-mon">Monday</button>
+                    <button class="day-btn" data-day="women-tue">Tuesday</button>
+                    <button class="day-btn" data-day="women-wed">Wednesday</button>
+                    <button class="day-btn" data-day="women-thu">Thursday</button>
+                    <button class="day-btn" data-day="women-fri">Friday</button>
+                    <button class="day-btn" data-day="women-sat">Saturday</button>
+                </div>
+
+                <!-- Women Sunday -->
+                <div class="day-content active" id="women-sun">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>AM</span></div><div class="class-info"><h3>MORNING YOGA</h3><p>Recovery • 60 Min</p></div><button class="book-btn" data-class="Morning Yoga" data-time="Sunday 08:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">10:00 <span>AM</span></div><div class="class-info"><h3>YOGA FLOW</h3><p>Recovery • 60 Min</p></div><button class="book-btn" data-class="Yoga Flow" data-time="Sunday 10:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:30 <span>PM</span></div><div class="class-info"><h3>PILATES CORE</h3><p>Mat Pilates • 45 Min</p></div><button class="book-btn" data-class="Pilates Core" data-time="Sunday 12:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">02:00 <span>PM</span></div><div class="class-info"><h3>STRETCH & RELAX</h3><p>Recovery • 45 Min</p></div><button class="book-btn" data-class="Stretch & Relax" data-time="Sunday 02:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">04:00 <span>PM</span></div><div class="class-info"><h3>BARRE SCULPT</h3><p>Tone • 50 Min</p></div><button class="book-btn" data-class="Barre Sculpt" data-time="Sunday 04:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:00 <span>PM</span></div><div class="class-info"><h3>EVENING FLOW</h3><p>Yoga • 60 Min</p></div><button class="book-btn" data-class="Evening Flow" data-time="Sunday 06:00 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Women Monday -->
+                <div class="day-content" id="women-mon" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">07:00 <span>AM</span></div><div class="class-info"><h3>SCULPT & TONE</h3><p>Full Body • 50 Min</p></div><button class="book-btn" data-class="Sculpt & Tone" data-time="Monday 07:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">09:00 <span>AM</span></div><div class="class-info"><h3>GLUTE FOCUS</h3><p>Lower Body • 45 Min</p></div><button class="book-btn" data-class="Glute Focus" data-time="Monday 09:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">11:30 <span>AM</span></div><div class="class-info"><h3>ARM & ABS</h3><p>Upper Body • 40 Min</p></div><button class="book-btn" data-class="Arm & Abs" data-time="Monday 11:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:00 <span>PM</span></div><div class="class-info"><h3>DANCE CARDIO</h3><p>Zumba • 60 Min</p></div><button class="book-btn" data-class="Dance Cardio" data-time="Monday 05:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:00 <span>PM</span></div><div class="class-info"><h3>CORE & MOBILITY</h3><p>Recovery • 40 Min</p></div><button class="book-btn" data-class="Core & Mobility" data-time="Monday 06:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:30 <span>PM</span></div><div class="class-info"><h3>WIND DOWN</h3><p>Yoga • 45 Min</p></div><button class="book-btn" data-class="Wind Down" data-time="Monday 07:30 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Women Tuesday -->
+                <div class="day-content" id="women-tue" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>AM</span></div><div class="class-info"><h3>LOWER BODY BURN</h3><p>Legs • 45 Min</p></div><button class="book-btn" data-class="Lower Body Burn" data-time="Tuesday 06:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:30 <span>AM</span></div><div class="class-info"><h3>BOOTY BAND CAMP</h3><p>Glutes • 30 Min</p></div><button class="book-btn" data-class="Booty Band Camp" data-time="Tuesday 08:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:00 <span>PM</span></div><div class="class-info"><h3>UPPER BODY TONE</h3><p>Arms • 45 Min</p></div><button class="book-btn" data-class="Upper Body Tone" data-time="Tuesday 12:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:30 <span>PM</span></div><div class="class-info"><h3>SPIN CLASS</h3><p>Cardio • 45 Min</p></div><button class="book-btn" data-class="Spin Class" data-time="Tuesday 05:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>PM</span></div><div class="class-info"><h3>HIIT FOR HER</h3><p>Cardio • 45 Min</p></div><button class="book-btn" data-class="HIIT for Her" data-time="Tuesday 06:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>PM</span></div><div class="class-info"><h3>YOGA NIDRA</h3><p>Relaxation • 45 Min</p></div><button class="book-btn" data-class="Yoga Nidra" data-time="Tuesday 08:00 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Women Wednesday -->
+                <div class="day-content" id="women-wed" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">07:00 <span>AM</span></div><div class="class-info"><h3>FULL BODY SCULPT</h3><p>Strength • 50 Min</p></div><button class="book-btn" data-class="Full Body Sculpt" data-time="Wednesday 07:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">09:00 <span>AM</span></div><div class="class-info"><h3>CARDIO KICKBOXING</h3><p>Combat • 45 Min</p></div><button class="book-btn" data-class="Cardio Kickboxing" data-time="Wednesday 09:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:15 <span>PM</span></div><div class="class-info"><h3>DUMBBELL CIRCUIT</h3><p>Full Body • 30 Min</p></div><button class="book-btn" data-class="Dumbbell Circuit" data-time="Wednesday 12:15 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:00 <span>PM</span></div><div class="class-info"><h3>PILATES MAT</h3><p>Core • 45 Min</p></div><button class="book-btn" data-class="Pilates Mat" data-time="Wednesday 05:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:00 <span>PM</span></div><div class="class-info"><h3>ZUMBA TONING</h3><p>Dance • 60 Min</p></div><button class="book-btn" data-class="Zumba Toning" data-time="Wednesday 06:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:30 <span>PM</span></div><div class="class-info"><h3>DEEP STRETCH</h3><p>Recovery • 45 Min</p></div><button class="book-btn" data-class="Deep Stretch" data-time="Wednesday 07:30 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Women Thursday -->
+                <div class="day-content" id="women-thu" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>AM</span></div><div class="class-info"><h3>GLUTES & HAMSTRINGS</h3><p>Lower Body • 50 Min</p></div><button class="book-btn" data-class="Glutes & Hamstrings" data-time="Thursday 06:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:30 <span>AM</span></div><div class="class-info"><h3>TUMMY TUCK (CORE)</h3><p>Abs • 30 Min</p></div><button class="book-btn" data-class="Tummy Tuck" data-time="Thursday 08:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:00 <span>PM</span></div><div class="class-info"><h3>KETTLEBELL TONE</h3><p>Functional • 45 Min</p></div><button class="book-btn" data-class="Kettlebell Tone" data-time="Thursday 12:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:30 <span>PM</span></div><div class="class-info"><h3>DANCE FIT</h3><p>Cardio • 60 Min</p></div><button class="book-btn" data-class="Dance Fit" data-time="Thursday 05:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">06:30 <span>PM</span></div><div class="class-info"><h3>MOBILITY & FOAM ROLLING</h3><p>Recovery • 40 Min</p></div><button class="book-btn" data-class="Mobility & Foam Rolling" data-time="Thursday 06:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">08:00 <span>PM</span></div><div class="class-info"><h3>RESTORATIVE YOGA</h3><p>Relaxation • 60 Min</p></div><button class="book-btn" data-class="Restorative Yoga" data-time="Thursday 08:00 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Women Friday -->
+                <div class="day-content" id="women-fri" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">07:00 <span>AM</span></div><div class="class-info"><h3>LEGS & GLUTES</h3><p>Strength • 50 Min</p></div><button class="book-btn" data-class="Legs & Glutes" data-time="Friday 07:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">09:00 <span>AM</span></div><div class="class-info"><h3>BACK & SHOULDERS</h3><p>Upper Body • 45 Min</p></div><button class="book-btn" data-class="Back & Shoulders" data-time="Friday 09:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:30 <span>PM</span></div><div class="class-info"><h3>SPIN & SWEAT</h3><p>Cardio • 45 Min</p></div><button class="book-btn" data-class="Spin & Sweat" data-time="Friday 12:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">04:30 <span>PM</span></div><div class="class-info"><h3>BARRE EXPRESS</h3><p>Tone • 30 Min</p></div><button class="book-btn" data-class="Barre Express" data-time="Friday 04:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:30 <span>PM</span></div><div class="class-info"><h3>TOTAL BODY CONDITIONING</h3><p>Strength • 60 Min</p></div><button class="book-btn" data-class="Total Body Conditioning" data-time="Friday 05:30 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">07:00 <span>PM</span></div><div class="class-info"><h3>FRIDAY NIGHT FLOW</h3><p>Yoga • 60 Min</p></div><button class="book-btn" data-class="Friday Night Flow" data-time="Friday 07:00 PM">Book →</button></div>
+                    </div>
+                </div>
+                <!-- Women Saturday -->
+                <div class="day-content" id="women-sat" style="display: none;">
+                    <div class="class-cards-grid">
+                        <div class="schedule-card glass-card"><div class="time">09:00 <span>AM</span></div><div class="class-info"><h3>WEEKEND WARRIOR</h3><p>Full Body • 60 Min</p></div><button class="book-btn" data-class="Weekend Warrior (Women)" data-time="Saturday 09:00 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">10:30 <span>AM</span></div><div class="class-info"><h3>BODYWEIGHT CIRCUIT</h3><p>Strength • 45 Min</p></div><button class="book-btn" data-class="Bodyweight Circuit" data-time="Saturday 10:30 AM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">12:00 <span>PM</span></div><div class="class-info"><h3>SPIN & SCULPT</h3><p>Cardio • 50 Min</p></div><button class="book-btn" data-class="Spin & Sculpt" data-time="Saturday 12:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">02:00 <span>PM</span></div><div class="class-info"><h3>YOGA & MIMOSAS</h3><p>Recovery • 75 Min</p></div><button class="book-btn" data-class="Yoga & Mimosas" data-time="Saturday 02:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">04:00 <span>PM</span></div><div class="class-info"><h3>OPEN GYM</h3><p>Access • 60 Min</p></div><button class="book-btn" data-class="Open Gym (Women)" data-time="Saturday 04:00 PM">Book →</button></div>
+                        <div class="schedule-card glass-card"><div class="time">05:30 <span>PM</span></div><div class="class-info"><h3>EVENING PILATES</h3><p>Core • 45 Min</p></div><button class="book-btn" data-class="Evening Pilates" data-time="Saturday 05:30 PM">Book →</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== PERSONAL TRAINING ==================== -->
+            <div class="schedule-grid pt-view" id="personal" style="display: none;">
+                <div class="pt-cta-container">
+                    <h2>1-ON-1 COACHING.</h2>
+                    <p>Accelerate your results with a dedicated personal trainer. Custom programming, nutrition guidance, and maximum accountability.</p>
+                    <a href="contact.html" class="btn-primary">Meet Our Trainers →</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/schedule.js"></script>
+</body>
+</html>

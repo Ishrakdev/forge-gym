@@ -1,0 +1,8 @@
+/* Initial states for GSAP to animate from */
+.hero-title, .hero-subtitle {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* The cards start hidden and low, ready to fan out */
+.card { opacity: 0; }

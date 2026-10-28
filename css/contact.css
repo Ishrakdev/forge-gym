@@ -1,0 +1,132 @@
+/* Contact Page Layout */
+.contact-page { 
+    background-color: var(--deep-black); 
+    min-height: 100vh; 
+    position: relative; 
+    overflow-x: hidden; 
+}
+
+/* Adds the glowing background effect */
+.contact-page::before {
+    content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 10% 50%, rgba(255, 90, 0, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(255, 90, 0, 0.05) 0%, transparent 50%);
+    z-index: -1;
+}
+
+.contact-main { 
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    padding: 10rem 5% 5rem; /* Clears the sticky header */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact-container { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 5rem; 
+    width: 100%; 
+    align-items: center;
+}
+
+/* Left Side Text */
+.contact-text .hero-title { 
+    font-family: var(--font-heading); 
+    font-size: clamp(3.5rem, 6vw, 5.5rem); 
+    line-height: 0.9; 
+    margin-bottom: 1.5rem; 
+    color: #fff;
+    letter-spacing: -2px;
+}
+.contact-text .hero-title span { color: var(--primary-orange); }
+.contact-text p { 
+    color: #aaa; 
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    max-width: 450px; 
+}
+
+/* Right Side Form Container */
+.form-wrapper { 
+    background: rgba(255, 255, 255, 0.02); 
+    backdrop-filter: blur(30px); 
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    padding: 3.5rem; 
+    border-radius: 24px; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* Progress Bar */
+.progress-bar { height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; margin-bottom: 2.5rem; overflow: hidden; }
+.progress { height: 100%; width: 33.33%; background: var(--primary-orange); transition: width 0.4s ease; box-shadow: 0 0 10px var(--primary-orange); }
+
+/* Steps */
+.form-step { display: none; }
+.form-step.active { display: block; }
+
+.step-indicator { font-size: 0.8rem; color: var(--primary-orange); letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 1rem; font-weight: 800; }
+.form-step h2 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 1.5rem; letter-spacing: -0.5px; }
+
+/* Step 1: Goal Options */
+.options-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2rem; }
+.option-card input { display: none; }
+.option-card span { 
+    display: block; padding: 1.2rem; border: 1px solid rgba(255,255,255,0.1); 
+    border-radius: 12px; cursor: pointer; text-align: center; transition: 0.3s; 
+    font-weight: 600; color: #ccc; background: rgba(0,0,0,0.3);
+}
+.option-card input:checked + span { 
+    border-color: var(--primary-orange); 
+    background: rgba(255,90,0,0.1); 
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255,90,0,0.2);
+}
+
+/* Step 2: Trainer Grid */
+.trainer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+.trainer-card input { display: none; }
+.trainer-card img { 
+    width: 100%; height: 220px; object-fit: cover; border-radius: 12px; 
+    border: 2px solid transparent; transition: 0.3s; cursor: pointer; opacity: 0.7;
+}
+.trainer-card span { display: block; text-align: center; margin-top: 0.8rem; font-size: 0.9rem; color: #aaa; font-weight: 600; transition: 0.3s; }
+.trainer-card input:checked + img { border-color: var(--primary-orange); opacity: 1; transform: scale(1.02); }
+.trainer-card input:checked ~ span { color: #fff; }
+
+/* Step 3: Email Input */
+.email-input { 
+    width: 100%; padding: 1.2rem; background: rgba(0,0,0,0.5); 
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; 
+    color: #fff; font-size: 1rem; margin-bottom: 2rem; outline: none; transition: 0.3s;
+}
+.email-input:focus { border-color: var(--primary-orange); box-shadow: 0 0 15px rgba(255,90,0,0.2); }
+
+/* Buttons */
+.btn-row { display: flex; justify-content: space-between; margin-top: 2rem; gap: 1rem; }
+.btn-primary, .btn-secondary { 
+    padding: 1rem 2rem; border-radius: 50px; font-weight: 800; 
+    text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: 0.3s; border: none; font-family: var(--font-body);
+}
+.btn-primary { background: var(--primary-orange); color: #000; flex: 1; }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,90,0,0.3); }
+.btn-secondary { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+.btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
+
+/* Success Message */
+#success-message { text-align: center; display: none; }
+#success-message h2 { color: var(--primary-orange); font-size: 3rem; }
+.promo-code { 
+    font-family: var(--font-heading); font-size: 3.5rem; color: #fff; 
+    background: rgba(0,0,0,0.5); padding: 1rem; border-radius: 12px; 
+    letter-spacing: 5px; border: 1px dashed var(--primary-orange); margin: 1.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contact-container { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-text { text-align: center; }
+    .contact-text p { margin: 0 auto; }
+    .form-wrapper { padding: 2.5rem; }
+}

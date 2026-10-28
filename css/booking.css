@@ -1,0 +1,100 @@
+:root {
+    --accent-color: #FF5A00;
+    --bg-glow: rgba(255, 90, 0, 0.2);
+    --bg-base: #050505;
+}
+
+/* The theme classes will be added to body by JS */
+body.men-theme { --accent-color: #00A3FF; --bg-glow: rgba(0, 163, 255, 0.2); }
+body.women-theme { --accent-color: #FF3366; --bg-glow: rgba(255, 51, 102, 0.2); }
+body.coed-theme { --accent-color: #FF5A00; --bg-glow: rgba(255, 90, 0, 0.2); }
+
+.booking-page { background-color: var(--bg-base); min-height: 100vh; overflow: hidden; position: relative; }
+
+/* Background Glow */
+.dynamic-bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, var(--bg-glow) 0%, transparent 60%);
+    z-index: -1; transition: background 0.8s ease;
+}
+
+.booking-main {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 8rem 5% 2rem;
+}
+
+.booking-container {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    padding: 4rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top Glowing Border on Card */
+.booking-container::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
+    background: var(--accent-color); box-shadow: 0 0 20px var(--accent-color);
+}
+
+.booking-header { text-align: center; margin-bottom: 3rem; }
+.theme-indicator { 
+    font-size: 0.8rem; font-weight: 800; letter-spacing: 3px; 
+    color: var(--accent-color); text-transform: uppercase; 
+}
+.booking-header h1 { 
+    font-family: var(--font-heading); font-size: 3rem; margin: 0.5rem 0; 
+    letter-spacing: -1px; 
+}
+.booking-header p { color: #aaa; font-size: 1.1rem; font-weight: 500; }
+
+/* Form Inputs */
+.booking-form { display: flex; flex-direction: column; gap: 1.5rem; }
+.input-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.input-group label { font-size: 0.9rem; font-weight: 600; color: #ccc; margin-left: 0.5rem; }
+.input-group input {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.input-group input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px var(--bg-glow);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.btn-submit {
+    background: var(--accent-color);
+    color: #000;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: 0.3s;
+}
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--bg-glow);
+}
+
+.success-msg { text-align: center; }
+.success-msg h2 { font-family: var(--font-heading); font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem; }
+.success-msg p { color: #aaa; font-size: 1.1rem; }

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORGE | Performance in Constant Motion</title>
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Sticky Glassmorphism Header -->
+    <header class="main-header" id="header">
+        <div class="logo">FORGE.</div>
+        <nav class="nav-links">
+            <a href="#spaces">Facilities</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="contact.html">Train with us</a>
+        </nav>
+        <a href="contact.html" class="btn-login">Join the Club</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg" style="background-image: url('assets/images/hero-bg.jpg');"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">PERFORMANCE IN<br><span>CONSTANT</span> MOTION</h1>
+            <p class="hero-subtitle">Inspired by kinetic energy. FORGE creates tech-driven sportswear engineered to move, adapt, and perform with your body.</p>
+        </div>
+
+        <div class="hero-cards-wrapper">
+            <div class="card-fan">
+                <div class="card" style="background-image: url('assets/images/card-1.jpg');"></div>
+                <div class="card" style="background-image: url('assets/images/card-2.jpg');"></div>
+                <div class="card" style="background-image: url('assets/images/card-3.jpg');"></div>
+                <div class="card" style="background-image: url('assets/images/card-4.jpg');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GYM SPACES SECTION -->
+    <section class="spaces-section" id="spaces">
+        <div class="spaces-header">
+            <h2 class="section-title">WORLD-CLASS<br>FACILITIES.</h2>
+            <p class="section-desc">Explore our dedicated zones, engineered for every type of athlete.</p>
+        </div>
+
+        <div class="spaces-grid">
+            <div class="space-card">
+                <img src="assets/images/space-lifting.jpg" alt="Lifting Zone">
+                <div class="space-info"><h3>THE IRON FLOOR</h3><p>Strength & Powerlifting</p></div>
+            </div>
+            <div class="space-card">
+                <img src="assets/images/space-boxing.jpg" alt="Boxing Ring">
+                <div class="space-info"><h3>COMBAT ZONE</h3><p>Boxing & MMA</p></div>
+            </div>
+            <div class="space-card">
+                <img src="assets/images/space-yoga.jpg" alt="Yoga Studio">
+                <div class="space-info"><h3>THE STUDIO</h3><p>Yoga & Mobility</p></div>
+            </div>
+            <div class="space-card">
+                <img src="assets/images/space-fitness.jpg" alt="Cardio Area">
+                <div class="space-info"><h3>ENGINE ROOM</h3><p>Cardio & Conditioning</p></div>
+            </div>
+            <div class="space-card">
+                <img src="assets/images/space-swimming.jpg" alt="Swimming Pool">
+                <div class="space-info"><h3>AQUATICS</h3><p>Lap Pool & Recovery</p></div>
+            </div>
+            <div class="space-card">
+                <img src="assets/images/space-zumba.jpg" alt="Zumba Studio">
+                <div class="space-info"><h3>RHYTHM ROOM</h3><p>Zumba & HIIT</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL MEGA FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">FORGE.</div>
+                <p>Engineered for the modern athlete. Push your limits with our premium tech-driven facilities.</p>
+                <div class="social-links">
+                    <a href="#">IG</a>
+                    <a href="#">X</a>
+                    <a href="#">YT</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#spaces">Facilities</a></li>
+                    <li><a href="schedule.html">Class Schedule</a></li>
+                    <li><a href="contact.html">Personal Training</a></li>
+                    <li><a href="#">Membership</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li>123 Fitness Ave, NY</li>
+                    <li>hello@forge.com</li>
+                    <li>+1 (555) 123-4567</li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Join the Newsletter</h4>
+                <p>Get exclusive drops and fitness tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FORGE. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

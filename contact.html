@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train With Us | FORGE</title>
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Load Global and Contact CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="contact-page">
+
+    <!-- STICKY HEADER -->
+    <header class="main-header" id="header">
+        <div class="logo">FORGE.</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="contact.html" style="color: var(--primary-orange);">Train with us</a>
+        </nav>
+        <a href="contact.html" class="btn-login">Join the Club</a>
+    </header>
+
+    <main class="contact-main">
+        <div class="contact-container">
+            
+            <!-- Left Text -->
+            <div class="contact-text">
+                <h1 class="hero-title">CLAIM YOUR <br><span>10% OFF</span></h1>
+                <p>Take the first step. Answer a few questions, choose your comfort level, and we will match you with the perfect personal trainer.</p>
+            </div>
+
+            <!-- Right Form -->
+            <div class="form-wrapper">
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+
+                <form id="multi-step-form">
+                    <!-- STEP 1: GOALS -->
+                    <div class="form-step active" id="step-1">
+                        <span class="step-indicator">Step 01 / 03</span>
+                        <h2>What is your goal?</h2>
+                        
+                        <div class="options-grid">
+                            <label class="option-card">
+                                <input type="radio" name="goal" value="muscle" required>
+                                <span>Build Muscle</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="goal" value="weight">
+                                <span>Lose Weight</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="goal" value="endurance">
+                                <span>Improve Endurance</span>
+                            </label>
+                        </div>
+                        
+                        <div class="btn-row">
+                            <button type="button" class="btn-primary next-btn" style="width: 100%;">Next Step →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: TRAINER PREFERENCE -->
+                    <div class="form-step" id="step-2">
+                        <span class="step-indicator">Step 02 / 03</span>
+                        <h2>Trainer Preference</h2>
+                        <p style="color: #aaa; margin-bottom: 1.5rem;">Choose who you feel most comfortable training with.</p>
+                        
+                        <div class="trainer-grid">
+                            <label class="trainer-card">
+                                <input type="radio" name="trainer" value="male" required>
+                                <img src="assets/images/male-trainer.jpg" alt="Male Trainer">
+                                <span>Male Trainer</span>
+                            </label>
+                            <label class="trainer-card">
+                                <input type="radio" name="trainer" value="female">
+                                <img src="assets/images/female-trainer.jpg" alt="Female Trainer">
+                                <span>Female Trainer</span>
+                            </label>
+                        </div>
+                        
+                        <div class="btn-row">
+                            <button type="button" class="btn-secondary prev-btn">← Back</button>
+                            <button type="button" class="btn-primary next-btn">Next Step →</button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: EMAIL -->
+                    <div class="form-step" id="step-3">
+                        <span class="step-indicator">Step 03 / 03</span>
+                        <h2>Almost there.</h2>
+                        <p style="color: #aaa; margin-bottom: 1.5rem;">Enter your email to receive your 10% OFF code and book your free session.</p>
+                        
+                        <input type="email" name="email" placeholder="you@email.com" required class="email-input">
+                        
+                        <div class="btn-row">
+                            <button type="button" class="btn-secondary prev-btn">← Back</button>
+                            <button type="submit" class="btn-primary">Claim Offer</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- SUCCESS MESSAGE -->
+                <div id="success-message">
+                    <h2>YOU'RE IN!</h2>
+                    <p style="color: #aaa; margin-top: 1rem;">Your 10% OFF code is:</p>
+                    <div class="promo-code">FORGE10</div>
+                    <p style="color: #aaa;">Our team will contact you shortly to schedule your free session.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
