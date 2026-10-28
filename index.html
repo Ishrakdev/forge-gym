@@ -20,17 +20,24 @@
 
     <!-- Sticky Glassmorphism Header -->
     <header class="main-header" id="header">
+        <!-- 1. Logo (Goes to the left column) -->
         <div class="logo">FORGE.</div>
         
-        <!-- CLOSE/BURGER BUTTON -->
+        <!-- 2. Mobile Menu Button (Hidden on PC, Goes to the right on mobile) -->
         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
 
+        <!-- 3. Nav Links (Goes to the center column) -->
         <nav class="nav-links" id="nav-links">
-            <a href="#spaces">Facilities</a>
+            <a href="index.html">Home</a>
+            <a href="index.html#spaces">Facilities</a>
             <a href="schedule.html">Schedule</a>
             <a href="contact.html">Train with us</a>
-            <a href="contact.html" class="btn-login">Join the Club</a>
+            <!-- Mobile-only button inside the menu -->
+            <a href="contact.html" class="btn-login mobile-btn">Join the Club</a>
         </nav>
+
+        <!-- 4. Desktop Button (Hidden on mobile, Goes to the far right column) -->
+        <a href="contact.html" class="btn-login desktop-btn">Join the Club</a>
     </header>
 
     <!-- Hero Section -->
